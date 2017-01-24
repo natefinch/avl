@@ -44,8 +44,7 @@ func (t *Tree) Search(b []byte) *Node {
 	return nil
 }
 
-// Delete removes the node of the tree with the value of b.  It reports if the
-// value existed in the tree.
+// Delete removes the node of the tree with the value of b.
 func (t *Tree) Delete(b []byte) {
 	defer t.mu.Unlock()
 	t.mu.Lock()
