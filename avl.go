@@ -1,5 +1,5 @@
 // Package avl contains an implmentation of an AVL tree that contains []byte
-// values.
+// keys.
 package avl
 
 import (
@@ -157,6 +157,7 @@ func (n *Node) rebalance() *Node {
 		}
 		return n.rotateRight()
 	default:
+		// -1, 0, 1: already balanced
 		return n
 	}
 }
